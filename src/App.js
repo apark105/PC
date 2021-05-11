@@ -118,9 +118,9 @@ function App() {
     // console.log('toggle card', id);
   }
 
-  const editMovieInfo = () => {
+  // const editMovieInfo = () => {
     
-  }
+  // }
 
   const deleteCard = (id) => {
     // console.log('delete card', id)
