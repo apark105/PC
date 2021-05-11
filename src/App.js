@@ -72,7 +72,8 @@ function App() {
 
 
   const addMovieInfo = (details) => {
-    console.log(details)
+    // console.log(details)
+
 
     const id = Math.floor(Math.random() * 10000) + 1
 
@@ -81,7 +82,7 @@ function App() {
 
     setMovieDetails([...movieDetails, newDetails])
 
-    console.log('app lvl: ',)
+    // console.log('app lvl: ',)
   }
 
   const toggleCard = (index) => {
@@ -102,7 +103,7 @@ function App() {
       if(newState[index]) {
         if(newState[index].selected === true) {
           newState[index].selected = false;
-          console.log('this should close')
+          // console.log('this should close')
         } else {
           newState[index].selected = true;
         }   
@@ -122,7 +123,7 @@ function App() {
   }
 
   const deleteCard = (id) => {
-    console.log('delete card', id)
+    // console.log('delete card', id)
     // let movies = movieDetails.filter((item) => item.id !== id)
     // console.log('deleted', movies)
     setMovieDetails(

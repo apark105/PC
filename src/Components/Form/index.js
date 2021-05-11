@@ -55,18 +55,18 @@ function Form({ categoryList, addMovieInfo }) {
 
             //check for char to be a letter, if not letter skip iteration
             if (!(/[a-zA-Z]/).test(movie[i])) {
-                console.log('this should be skipped')
+                // console.log('this should be skipped')
                 continue
             }
             //check char to be uppercase, if so concat
             if (movie[i] === movie[i].toLocaleUpperCase()) {
                 movieInitial += movie[i]
-                console.log('this should have been added', movieInitial)
+                // console.log('this should have been added', movieInitial)
             }
         }
-        console.log('Movie Initial', movieInitial)
+        // console.log('Movie Initial', movieInitial)
 
-        console.log('submitted', movie, category, rating)
+        // console.log('submitted', movie, category, rating)
         addMovieInfo({ initial: movieInitial, movie, category, rating, selected:false })
 
 

@@ -6,7 +6,7 @@ import './style.css';
 function CardContainer({movieDetails, toggleCard, deleteCard}) {
 
 
-    console.log(movieDetails);
+    // console.log(movieDetails);
 
     return (
         <div className="card-container">
