@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     width: 560px;
     height: 72px;
     margin: 24px 0;
@@ -42,11 +43,15 @@
 
 .category-select {
     width: 437px;
-    background-position-x: 200px;
-    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right white;
     -moz-appearance: none; /* Firefox */
     -webkit-appearance: none; /* Safari and Chrome */
     appearance: none;
+}
+
+.arrow {
+    position: absolute;
+    right: 18px;
+ 
 }
 
 .form-rating {

@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import filledStar from "../../Assets/Stars/filled-star.svg"
 import unfilledStar from "../../Assets/Stars/unfilled-star.svg"
+import arrow from "../../Assets/arrow.svg"
 
 import "./style.css";
 
@@ -122,8 +123,9 @@ function Form({ categoryList, addMovieInfo }) {
 
             <div className="form-category">
                 <label className="category-label" htmlFor="formCategory">Category</label>
+                <img src={arrow} alt="dropdown" className="arrow"/>
                 <select className="category-select" placeholder="Select a category" id="formCategory">
-                     <option value="" disabled selected>Select a Category</option>
+                    <option value="" disabled selected>Select a Category</option>
 
                     {
                         categoryList && categoryList.map((item, index) => {
@@ -155,7 +157,7 @@ function Form({ categoryList, addMovieInfo }) {
                                         className="star-img__unfilled"
                                         alt="star rating"
                                         onClick={() => {
-                                            selectRating(i+1);
+                                            selectRating(i + 1);
                                         }}
                                         src={unfilledStar}
                                     />
@@ -163,7 +165,7 @@ function Form({ categoryList, addMovieInfo }) {
                                         className={i < rating ? "star-img__filled star-img__filled-active" : "star-img__filled star-img__filled-inactive"}
                                         alt="star rating"
                                         onClick={() => {
-                                            selectRating(i+1);
+                                            selectRating(i + 1);
                                         }}
                                         src={filledStar}
                                     />
