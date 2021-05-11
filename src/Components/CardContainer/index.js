@@ -1,39 +1,20 @@
-import {useState} from 'react';
+// import {useState} from 'react';
 import CardDetails from '../CardDetails';
 import './style.css';
 
 
-function CardContainer({movieDetails}) {
-    const [star, setStar] = useState([
-        {
-            starCount: 1,
-            selected: false,
-        },
-        {
-            starCount: 2,
-            selected: false,
-        },
-        {
-            starCount: 3,
-            selected: false,
-        },
-        {
-            starCount: 4,
-            selected: false,
-        },
-        {
-            starCount: 5,
-            selected: false,
-        }
-    ])
+function CardContainer({movieDetails, toggleCard, deleteCard}) {
+
 
     console.log(movieDetails);
 
     return (
         <div className="card-container">
-            {movieDetails && movieDetails.map( (item) => {
+            {movieDetails && movieDetails.map( (item, index) => {
                 return (
-                    <CardDetails key={item.id} details={item} starRating={star}/>
+                    <CardDetails key={item.id} details={item} toggleCard={ ()=> {
+                        toggleCard(index)
+                    }} deleteCard={deleteCard}/>
                 )
             })}
         </div>

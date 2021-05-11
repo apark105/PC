@@ -67,7 +67,7 @@ function Form({ categoryList, addMovieInfo }) {
         console.log('Movie Initial', movieInitial)
 
         console.log('submitted', movie, category, rating)
-        addMovieInfo({ initial: movieInitial, movie, category, rating })
+        addMovieInfo({ initial: movieInitial, movie, category, rating, selected:false })
 
 
 
@@ -124,8 +124,8 @@ function Form({ categoryList, addMovieInfo }) {
             <div className="form-category">
                 <label className="category-label" htmlFor="formCategory">Category</label>
                 <img src={arrow} alt="dropdown" className="arrow"/>
-                <select className="category-select" placeholder="Select a category" id="formCategory">
-                    <option value="" disabled selected>Select a Category</option>
+                <select className="category-select" defaultValue={'DEFAULT'} id="formCategory">
+                    <option value="DEFAULT" disabled>Select a Category</option>
 
                     {
                         categoryList && categoryList.map((item, index) => {

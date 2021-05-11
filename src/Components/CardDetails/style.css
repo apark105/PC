@@ -2,13 +2,24 @@
 .card {
     display: flex;
     align-items: center;
+    position: relative;
     width: 640px;
-    height: 127px;
+    height: 129px;
     border: 1px solid #EEEEEE;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.card::after {
+    content:""
+
+}
+
+.card:hover {
+    box-shadow: 0px 1px 10px grey;
 }
 
 .card-id {
-    /* position: absolute; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,8 +27,6 @@
     width: 64px;
     height: 64px;
     margin-left: 40px;
-    /* left: 40px;
-    top: 33px; */
     border-radius: 40px;
     background: #61a0ff;
     color: white;
@@ -62,4 +71,37 @@
 }
 .star__filled-inactive {
     visibility: hidden;
+}
+
+.card-button-active {
+    display: block;
+    transform: translate(0px, 0px);
+}
+
+.card-button-inactive {
+    transform: translate(130px, 0px);
+}
+
+.card-button {
+    transition: ease-in-out 0.75s;
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+.card-edit, .card-delete {
+    height: 100%;
+    width: 4rem;
+    padding: 0;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.card-edit {
+    background: #565656;
+}
+
+.card-delete {
+    background: #cc304e;;
 }

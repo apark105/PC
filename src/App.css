@@ -6,6 +6,7 @@
     border: 1px solid #d8d8d8;
     border-radius: 24px;
     margin: 30px auto;
+    overflow: hidden;
 }
 
 .screen-header {
@@ -19,3 +20,37 @@
     margin: 30px 0;
 }
 
+
+@media screen and (max-width: 640px) {
+    .screen-container {
+        max-width: 500px;
+    }
+
+    .form-name, .form-category {
+        width: 400px;
+        height: 72px;
+        margin: 24px 0;
+        
+    }
+
+    .form-button, .form-rating {
+        width: 400px;
+    }
+
+    .card {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-catgeory {
+        font-size: 10px;
+    }
+
+    .card-rating {
+        margin-right: 10px;
+    }
+}

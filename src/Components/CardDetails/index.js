@@ -1,28 +1,14 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import './style.css';
 import filledStar from "../../Assets/Stars/filled-star.svg"
 import unfilledStar from "../../Assets/Stars/unfilled-star.svg"
 
 
-function CardDetails({ details, starRating }) {
-    const { initial, movie, category, rating } = details
-
-    // console.log('Card Details: ', details)
-    // const mountStars = starRating
-
-    // useEffect(() => {
-    //     console.log('comp did mount', mountStars)
-    //     for (let i=0; i<rating; i++) {
-    //         mountStars[i].selected = true;
-    //         console.log(mountStars[i])
-    //     }
-    //     console.log('comp after loop mount', mountStars)
-
-    // })
-
+function CardDetails({details, toggleCard, deleteCard }) {
+    const {id, initial, movie, category, rating, selected } = details
 
     return (
-        <div className="card">
+        <div className="card" onClick={toggleCard} >
             <div className="card-id">{initial}</div>
             <div className="card-detail">
                 <div className="card-title">{movie}</div>
@@ -51,6 +37,10 @@ function CardDetails({ details, starRating }) {
                     }
 
                 </div>
+            </div>
+            <div className={ selected ? 'card-button card-button-active' : 'card-button card-button-inactive'}>
+                <button className="card-edit">Edit</button>
+                <button onClick={ ()=> {deleteCard(id)}} className="card-delete">Delete</button>
             </div>
         </div>
     )
